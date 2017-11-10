@@ -1,0 +1,32 @@
+{
+  "name": "rain-finder",
+  "version": "1.0.0",
+  "description": "Find where it's raining in the world!",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcjcc/hrsf84-mvp.git"
+  },
+  "author": "Johnny Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mcjcc/hrsf84-mvp/issues"
+  },
+  "homepage": "https://github.com/mcjcc/hrsf84-mvp#readme",
+  "dependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33",
+    "mongoose": "^4.13.1",
+    "react": "^16.1.0",
+    "react-dom": "^16.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  }
+}
