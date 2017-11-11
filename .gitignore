@@ -1,4 +1,6 @@
 ### node etc ###
+# Config directory
+config/
 
 # Logs
 logs

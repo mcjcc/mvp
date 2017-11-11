@@ -1,4 +1,4 @@
-# Rain Finder #
+# Pet Adoption Finder #
 
 
 <!--
@@ -17,21 +17,21 @@ Oh, and I also like to write press-releases in what I call "Oprah-speak" for mai
 Once the project moves into development, the press release can be used as a touchstone; a guiding light. The product team can ask themselves, "Are we building what is in the press release?" If they find they're spending time building things that aren't in the press release (overbuilding), they need to ask themselves why. This keeps product development focused on achieving the customer benefits and not building extraneous stuff that takes longer to build, takes resources to maintain, and doesn't provide real customer benefit (at least not enough to warrant inclusion in the press release).
  -->
 
-## Rain Finder ##
+## Pet Adoption Finder ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
 
 ## Audience ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
-  This product is used by businesses. This product allows decision makers to know when and where to allocate their resources.
+  This app is used by people who want to adopt a pet!
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
-  The product allows users to find the areas affected by rain.
+  This app will provide a nice looking interface for people looking to adopt a pet!
 
 
 ## Problem ##
   > Describe the problem your product solves.
-
+  Currently most pet adoption websites look like they were created in the early 2000s.
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
