@@ -4,7 +4,9 @@
   "description": "Find where it's raining in the world!",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "react-dev": "webpack -d --watch",
+    "server-dev": "nodemon ./server/index.js"
   },
   "repository": {
     "type": "git",
