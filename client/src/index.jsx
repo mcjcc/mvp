@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Search from './components/Search.jsx';
+import AnimalsList from './components/AnimalsList.jsx';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -10,7 +13,10 @@ class App extends React.Component {
   }
   render () {
     return (
-      <h1>react!</h1>
+      <div>
+        <Search />
+        <AnimalsList />
+      </div>
     )
   }
 }
