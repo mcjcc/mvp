@@ -9,15 +9,15 @@ const AnimalsList = (props) => {
       List of adoptees:
       <div>
 
-        <div class="image"></div>
-        <div class="name">Daisy</div>
-        <div class="breed">Iggy</div>
-        <div class="location">Rockville, MD</div>
+        <div className="image"></div>
+        <div className="name">Daisy</div>
+        <div className="breed">Iggy</div>
+        <div className="location">Rockville, MD</div>
 
-        <div class="image"></div>
-        <div class="name">Spike</div>
-        <div class="breed">Golden Retriever</div>
-        <div class="location">San Francisco, CA</div>
+        <div className="image"></div>
+        <div className="name">Spike</div>
+        <div className="breed">Golden Retriever</div>
+        <div className="location">San Francisco, CA</div>
 
       </div>
 
