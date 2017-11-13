@@ -11,10 +11,15 @@ if (process.env.NODE_ENV === 'production') {
 
 let url = 'http://api.petfinder.com/';
 
+
+
 var petFind = function(zip, animalType, callback) {
   console.log('inside petFind helper function');
-  var apiMethod = 'pet.find'
-  var formedURL = `${url}${apiMethod}?key=${petFinderAPIKey}&location=${zip}&animal=${animalType}&format=json`;
+  // how many animals to return for petFind
+  var count = 50;
+  var apiMethod = 'pet.find';
+  var formedURL = `${url}${apiMethod}?key=${petFinderAPIKey}&location=${zip}&animal=${animalType}&count=${count}&format=json`;
+  // var formedURL = `${url}${apiMethod}?key=${petFinderAPIKey}&location=${zip}&animal=${animalType}&format=json`;
   console.log('formedURL: ', formedURL);
   var options = {
     url: formedURL,
@@ -33,7 +38,7 @@ var petFind = function(zip, animalType, callback) {
 // TODO: add a helper function that formats data
 
 var gatherPhotos = function() {
-  
+
 }
 
 module.exports.petFind = petFind;

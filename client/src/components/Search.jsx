@@ -37,11 +37,15 @@ class Search extends React.Component {
     return (
       <div>
         <label>Location</label>
-        <input type="text" onChange={this.onInputTextChange.bind(this)} />
+        <input type="text" onChange={this.onInputTextChange.bind(this)} placeholder="Enter Zip Code" />
         <label>Type</label>
         <select onChange={this.onSelectChange.bind(this)} >
           <option value="dog">Dog</option>
           <option value="cat">Cat</option>
+          <option value="bird">Bird</option>
+          <option value="horse">Horse</option>
+          <option value="reptile">Reptile</option>
+          <option value="smallfurry">Smallfurry</option>
         </select>
         <button onSubmit={this.search.bind(this)} onClick={this.search.bind(this)}>Find some animals!</button>
       </div>

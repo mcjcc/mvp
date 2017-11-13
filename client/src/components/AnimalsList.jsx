@@ -12,9 +12,16 @@ const AnimalsList = (props) => {
         {
           props.animals.map((animal) => {
 
-            var image = animal.media.photos.photo.filter((photo) => {
-              return photo['@size'] === 'pn';
-            })
+            // grabs first image that is of size 'pn'
+            if (animal.media.photos) {
+              var image = animal.media.photos.photo.filter((photo) => {
+                return photo['@size'] === 'pn';
+              });
+            } else {
+              var image = [{$t: 'http://petrescue.org.nz/theme/PetRescue/img/placeholder.jpg'}];
+            }
+
+            // formats breed depending on if it's a mixed breed
             if (animal.breeds.breed.constructor === Array) {
               var breedStr = ''
               animal.breeds.breed.forEach((breed) => {breedStr += `${breed.$t}, `});
@@ -23,13 +30,17 @@ const AnimalsList = (props) => {
             } else if (animal.breeds.breed.constructor === Object) {
               var breedStr = animal.breeds.breed.$t;
             }
+
             return (
-              <div>
+              <div key={animal.id.$t}>
                 <img src={image[0].$t} />
-                <div className="name">Name: {animal.name.$t}</div>
-                <div className="breed">Breed: {breedStr}</div>
-                <div className="gender">Gender: {animal.sex.$t}</div>
-                <div className="location">{animal.contact.city.$t}, {animal.contact.state.$t}</div>
+                <div className="name"><strong>Name:</strong> {animal.name.$t}</div>
+                <div className="breed"><strong>Breed:</strong> {breedStr}</div>
+                <div className="gender"><strong>Gender:</strong> {animal.sex.$t}</div>
+                <div className="location"><strong>Location:</strong> {animal.contact.city.$t}, {animal.contact.state.$t}</div>
+                <div className="phone"><strong>Phone:</strong> {animal.contact.phone.$t}</div>
+                <div className="description"><strong>Description:</strong> {animal.description.$t}</div>
+                <br/><br/><br/>
               </div>
             );
           })
