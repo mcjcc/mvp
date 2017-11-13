@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import $ from 'jquery';
 import Search from './components/Search.jsx';
 import AnimalsList from './components/AnimalsList.jsx';
 
@@ -11,10 +11,15 @@ class App extends React.Component {
 
     }
   }
+
+  queryApi () {
+
+  }
+
   render () {
     return (
       <div>
-        <Search />
+        <Search onSearch={this.queryApi}/>
         <AnimalsList />
       </div>
     )

@@ -12,5 +12,28 @@ db.once('open', function() {
 });
 
 let animalsSchema = mongoose.Schema({
+  name: String,
+  animalId: Number,
+  type: String,
+  description: String,
+  size: String,
+  age: String,
+  breeds: [String],
+  gender: String,
+  mix: Boolean.
+  shelterId: String,
+  photos: Schema.Types.Mixed,
+  city: String,
+  zip: String,
+  state: String,
+  email: String,
+  phone: String
+});
 
-})
+
+let save = () => {
+
+
+}
+
+modules.export.save = save;
