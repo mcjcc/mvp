@@ -25,7 +25,8 @@
     "mongodb": "^2.2.33",
     "mongoose": "^4.13.1",
     "react": "^16.1.0",
-    "react-dom": "^16.1.0"
+    "react-dom": "^16.1.0",
+    "request": "^2.83.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
