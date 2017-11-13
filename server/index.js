@@ -1,6 +1,8 @@
 var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
+var petFinder = require('../services/petfinder');
+
 var app = express();
 
 var port = 3000;
@@ -18,21 +20,15 @@ app.get('/', function(req, res) {
 app.post('/animals', function(req, res) {
   //
   console.log(req.body);
-    // var searchTerm = req.body.searchTerm;
-    //
-    // // call a helper function that takes in github username
-    // github.getReposByUsername(searchTerm, function(error, response, body){
-    //   if (error) { throw error; }
-    //
-    //
-    //   database.save(body, function(error, message){
-    //     if (error){
-    //       res.send(error);
-    //     }
-    //     res.send(message);
-    //   });
-    //
-    // });
+  var zip = req.body.zip;
+  var animalType = req.body.animalType;
+
+  petFinder.petFind(zip, animalType, function( error, response, body) {
+    if (error) { throw error; }
+    var petsArray = body;
+    res.send(petsArray);
+  });
+
 });
 
 app.get('/:id', function(req, res) {

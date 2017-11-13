@@ -17,14 +17,12 @@ class Search extends React.Component {
   }
 
   onInputTextChange (e) {
-    console.log('onInputTextChange', e.target.value);
     this.setState({
       zip: e.target.value
     });
   }
 
   onSelectChange (e) {
-    console.log('onSelectChange', e.target.value);
     this.setState({
       animalType: e.target.value
     })

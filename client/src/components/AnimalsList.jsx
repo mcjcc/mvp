@@ -6,18 +6,35 @@ const AnimalsList = (props) => {
 
   return (
     <div>
-      List of adoptees:
+      List of animals available for adoption:
       <div>
 
-        <div className="image"></div>
-        <div className="name">Daisy</div>
-        <div className="breed">Iggy</div>
-        <div className="location">Rockville, MD</div>
+        {
+          props.animals.map((animal) => {
 
-        <div className="image"></div>
-        <div className="name">Spike</div>
-        <div className="breed">Golden Retriever</div>
-        <div className="location">San Francisco, CA</div>
+            var image = animal.media.photos.photo.filter((photo) => {
+              return photo['@size'] === 'pn';
+            })
+            if (animal.breeds.breed.constructor === Array) {
+              var breedStr = ''
+              animal.breeds.breed.forEach((breed) => {breedStr += `${breed.$t}, `});
+              breedStr = breedStr.slice(0, -2);
+              console.log(breedStr);
+            } else if (animal.breeds.breed.constructor === Object) {
+              var breedStr = animal.breeds.breed.$t;
+            }
+            return (
+              <div>
+                <img src={image[0].$t} />
+                <div className="name">Name: {animal.name.$t}</div>
+                <div className="breed">Breed: {breedStr}</div>
+                <div className="gender">Gender: {animal.sex.$t}</div>
+                <div className="location">{animal.contact.city.$t}, {animal.contact.state.$t}</div>
+              </div>
+            );
+          })
+        }
+
 
       </div>
 

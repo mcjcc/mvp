@@ -12,12 +12,19 @@ class App extends React.Component {
     }
   }
 
+  populateList (data) {
+    this.setState({
+      animals: data
+    })
+  }
+
   search (zip, animalType) {
     // post request to server
     // server will then send a get request to petfinder api
 
     console.log(`${zip} and ${animalType} was searched`);
 
+    var populateList = this.populateList.bind(this);
     var jsonData = {
       zip: zip,
       animalType: animalType
@@ -31,6 +38,7 @@ class App extends React.Component {
     }).done(function(data, textStatus){
       console.log('search complete ', textStatus);
       console.log('search complete', data);
+      populateList(data);
     }).fail(function(textStatus, error){
       if (error) { console.error(error); }
     });
